@@ -27,9 +27,7 @@ public class PracticeProblem {
         int sum = 0;
         for (int i = 0; i < arr2d.length; i++) {
             for (int j = 0; j < arr2d[i].length; j++) {
-                if (j < arr2d[i].length) {
                     sum += arr2d[i][j];
-                }
             }
         }
         return sum;
@@ -44,9 +42,7 @@ public class PracticeProblem {
     public static int sumColumn(int[][] arr2d, int col) {
         int sum = 0;
         for (int i = 0; i < arr2d.length; i++) {
-            if (col < arr2d[i].length) {
-                sum += arr2d[i][col];
-            }
+            sum += arr2d[i][col];
         }
         return sum;
     }
