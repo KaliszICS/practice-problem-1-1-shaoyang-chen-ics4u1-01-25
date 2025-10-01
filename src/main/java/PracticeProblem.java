@@ -27,14 +27,16 @@ public class PracticeProblem {
         int sum = 0;
         for (int i = 0; i < arr2d.length; i++) {
             for (int j = 0; j < arr2d[i].length; j++) {
-                sum += arr2d[i][j];
+                if (j < arr2d[i].length) {
+                    sum += arr2d[i][j];
+                }
             }
         }
         return sum;
     }
     public static int sumRow(int[][] arr2d, int row) {
         int sum = 0;
-        for (int i = 0; i < arr2d.length; i++) {
+        for (int i = 0; i < arr2d[row].length; i++) {
             sum += arr2d[row][i];
         }
         return sum;
@@ -42,7 +44,9 @@ public class PracticeProblem {
     public static int sumColumn(int[][] arr2d, int col) {
         int sum = 0;
         for (int i = 0; i < arr2d.length; i++) {
-            sum += arr2d[i][col];
+            if (col < arr2d[i].length) {
+                sum += arr2d[i][col];
+            }
         }
         return sum;
     }
